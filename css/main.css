@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@font-face {
+    font-family: MesquiteW01-Regular;
+    src: url(/fonts/MesquiteW01-Regular.ttf);
+}
+
+/*--Everything----------------------------------------*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: black;
+}
+
+/*--Menu----------------------------------------------*/
+.menu-icon {
+    position: fixed;
+    z-index: 5;
+    margin: .6em;
+    cursor: pointer;
+    animation: anim-ham 3s forwards;
+}
+
+.hambar1, .hambar2, .hambar3 {
+    background-color: wheat;
+    height: 4px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 2px;
+    box-shadow: 0 0 1em #ff5031;
+    transform-origin: left;
+    transition: .25s;
+    
+}
+
+/*activates Ham to X animation*/
+.toggle-menu .hambar1 {
+    transform: rotate(45deg);
+}
+
+.toggle-menu .hambar2 {
+    opacity: 0;
+}
+
+.toggle-menu .hambar3 {
+    transform: rotate(-45deg);
+}
+
+.menu {
+    position: fixed;
+    z-index: 4;
+    background-color: maroon;
+    height: 100%;
+    width: 75%;
+    transition: .5s;
+    transform: translateX(-100%);
+    visibility: hidden;
+}
+
+.toggle-menu {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.menu ul {
+    padding: 3em 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu li {
+    margin: .1em 0;
+    padding: .6em 0;
+    width: 100%;
+    background-color: rgb(165, 4, 4);
+}
+
+.menu a {
+    color: wheat;
+    display: block;
+    padding: .4em 0;
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+/*--Intro----------------------------------------------*/
+
+.intro-img {
+    /*
+    background-image: url(..//images/flame3.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150% 100%;
+    */
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    animation: anim-intro 3s forwards;
+}
+
+/*--Logo-----------------------------------------------*/
+.hero {
+    align-content: center;
+    text-align: center;
+    margin-bottom: -6.2em;
+}
+
+.hero img {
+    width: 100%;
+    align-content: center;
+    animation: anim-hero 3s forwards;
+}
+
+.title {
+    font-family: "MesquiteW01-Regular", sans-serif;
+    color: wheat;
+    font-weight: 200;
+    font-size: 4em;
+    font-size-adjust: .5em;
+    text-shadow: 0 0 .2em #ff5031;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-.65em);
+    animation: anim-title 3s forwards;
+}
+
+.title div {
+    border-radius: .2em;
+    background-color: wheat;
+    box-shadow: 0 0 .2em #ff5031;
+    height: .07em;
+}
+
+.title span {
+    color: tomato;
+    font-size: 1.1em;
+}
+
+.titleBorder-bottom {
+    transform: translateY(-.12em);
+}
+
+/*--Moto-----------------------------------------------*/
+.moto {
+    padding: 5em .5em 5em;
+    background-color:maroon;
+    text-align: center;
+    color: wheat;
+    text-shadow: .1em .1em black;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.1em;
+    
+    animation: anim-moto 3s forwards;
+}
+
+.moto h2 {
+    margin: .1em;
+    padding: 0;
+}
+
+.moto span {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 1.1em;
+    color: tomato;
+}
+
+.moto h3 {
+    margin: .2em;
+    padding: .5em;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7em;
+}
+
+.moto .hellfire {
+    font-family: "MesquiteW01-Regular", sans-serif;
+    font-weight: 50;
+    font-size: 1.8em;
+}
+
+/*--Tags (Section Separators)--------------------------*/
+.separator {
+    position: absolute;
+    z-index: 3;
+    transform: translateY(-3em);
+    padding-top: 3.2em;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tag-line {
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background-color: red;
+    box-shadow: .1em .1em .1em black;
+    transform: skewX(-45deg) translateX(-3em) translateY(1.4em);
+}
+
+.tag-diag {
+    position: relative;
+    float: right;
+    height: 100px;
+    width: 10px;
+    background-color: maroon;
+    box-shadow: .1em .1em .1em black;
+    transform-origin: bottom;
+    transform: translate(-4.6em, -4.22em) skewX(-45deg);
+}
+
+.tag {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    font-family: "MesquiteW01-Regular", sans-serif;
+    font-size: 1.2em;
+    text-shadow: .1em .1em black;
+    color: wheat;
+    background-color: red;
+    box-shadow: .3em .2em .1em black;
+    padding: .1em 1.4em .1em  2em;
+    transform: skewX(-45deg) translateX(-1.2em) translateY(.6em);
+}
+
+.tag h1 {
+    margin: .1em;
+    font-weight: 50;
+    transform: skewX(45deg);
+}
+
+/*--About----------------------------------------------*/
+.about {
+    padding: 6em 1em 4em;
+    text-align: center;
+    line-height: 1.4em;
+    font-size: 1.2em;
+    background-color: tomato;
+    color: white;
+
+    animation: anim-moto 3s forwards;
+}
+
+.about img {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.about blockquote {
+    font-style: italic;
+    font-size: 1em;
+    color: wheat;
+    margin: 1.5em 0 4em;
+}
+
+.about h2 {
+    font-family: 'MesquiteW01-Regular', sans-serif;
+    font-weight: 50;
+    font-size: 3em;
+    text-shadow: 2px 2px black;
+}
+
+.about h2 span {
+    color: maroon;
+}
+
+/*--Projects-------------------------------------------*/
+.projects {
+    background-color: wheat;
+    padding: 7em 1em;
+    text-align: center;
+    font-size: 1.5em;
+
+    animation: anim-moto 3s forwards;
+}
+
+.projects img {
+    width: 100%;
+}
+
+.cites {
+    font-size: 0.8em;
+    color: maroon;
+}
+
+.projects h2 {
+    font-family: 'MesquiteW01-Regular', sans-serif;
+    font-weight: 50;
+    font-size: 3.5em;
+    color: maroon;
+    text-shadow: 2px 2px black;
+    padding: 0;
+    margin: .5em 0 0;
+}
+
+.projects strong {
+    color: maroon;
+}
+
+hr {
+    border: 1px dashed red;
+    margin: 4em 1em;
+}
+
+/*--Contact--------------------------------------------*/
+.contact {
+    margin: 0;
+    padding: 5em 1em 0.5em;
+    text-align: center;
+    background-color: brown;
+    color: wheat;
+
+    animation: anim-moto 3s forwards;
+}
+
+.contact table {
+    padding: 0 4em 1em;
+    /*list-style-type: none;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact table img {
+    width: 25px;
+    margin-right: 1em;  
+}
+
+.contact tr {
+    margin: 2.5em;
+    display: flex;
+    justify-content: left;
+}
+
+.contact a {
+    text-align: left;
+    text-decoration: none;
+    color: wheat;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.contact h4 {
+    margin: 0;
+    font-weight: normal;
+    font-style: italic;
+    color: burlywood;
+}
+
+/*--Animations-----------------------------------------*/
+@keyframes anim-intro {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes anim-hero {
+    0% {
+        opacity: 0;
+        transform: translateY(5em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}@keyframes anim-title {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-.65em);
+    }
+}
+
+@keyframes anim-ham {
+    0% {
+        opacity: 0;
+        transform: translateX(-1em);
+    }
+    90% {
+        opacity: 0;
+        transform: translateX(-1em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0em);
+    }
+}
+
+@keyframes anim-moto {
+    0% {
+        opacity: 0;
+        transform: translateY(2em);
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

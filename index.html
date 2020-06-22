@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>HellKnight25's Official Website</title>
+    <link rel="icon" href="/images/hk25favicon.png">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-icon" id="menu-icon">
+            <div class="hambar1"></div>
+            <div class="hambar2"></div>
+            <div class="hambar3"></div>
+        </div>
+
+        <div class="menu" id="menu">
+            <ul>
+                <li><a class="anchor" href="#">Home</a></li>
+                <li><a class="anchor" href="#about">About</a></li>
+                <li><a class="anchor" href="#projects">Projects</a></li>
+                <li><a class="anchor" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="intro"></div>
+
+    <section class="hero">
+        <img src="images/hero.jpg" alt="HellKnight25 logo">
+        <h1 class="title">
+            <div class="titleBorder-top"></div>
+                <span>H</span>ell<span>K</span>night<span>25</span>
+            <div class="titleBorder-bottom"></div>
+        </h1>
+    </section>
+
+    <section class="moto">
+        <h2><span>D</span>esigning & <span>D</span>eveloping</h2>
+        <h3>with</h3>
+        <h2><span class="hellfire">Hellfire</span> Passion!</h2>
+    </section>
+
+    <div class="separator">
+        <div class="tag-line"></div>
+        <div class="tag-diag"></div>
+        <div class="tag">
+            <h1>About</h1>
+        </div>
+    </div>
+    
+    <a name="about"></a>
+    <section class="about";>
+        <img src="/images/kier.jpg" alt="HK25 logo">
+        <blockquote>"Dream it. Plan it. Do it!"</blockquote>
+
+        <h2>Franco <span>"HK25"</span> Alcaraz</h2>
+        <br>
+        <p>Since I can remember, making projects on my own is my <em>passion</em>. From <strong>illustrations</strong> and <strong>music</strong> to full <strong>videogames</strong>.</p>
+        <p>Coming with new things to <em>create</em>, finding ways of making them <em>myself</em> and being in a never ending process of <em>learning</em> new stuff defines me</p>
+        <p>Take a small peek at some of my personal projects I'm working on.</p>
+    </section>
+
+    <div class="separator">
+        <div class="tag-line"></div>
+        <div class="tag-diag"></div>
+        <div class="tag">
+            <h1>Projects</h1>
+        </div>
+    </div>
+
+    <a name="projects"></a>
+    <section class="projects";>
+        <img src="/images/games.png" alt="games pictures">
+        <br>
+        <p class="cites">
+            top left: <cite>"Journey to Encantaria"</cite><br>
+            right: <cite>"The Battles of The Kierhari"</cite><br>
+            bottom left: <cite>"D-Rush"</cite>
+        </p>
+
+        <h2>Games</h2>
+
+        <p>Gaming is my absolute favourite hobby since early childhood. The idea of <strong>creating</strong> my very own characters, stories and worlds plague my mind the moment I realized that I could learn the necessary skills to bring them life.</p>
+        <hr>
+
+        <img src="/images/illustrations.png" alt="illustrations">
+        <br>
+        <p class="cites">
+            top left: <cite>"Blonde Swordwoman"</cite><br>
+            top right: <cite>"Reiji concept art"</cite><br>
+            bottom left: <cite>"Demon Girl"</cite><br>
+            bottom right: <cite>"Deeper Eyes Pues"</cite>
+        </p>
+
+        <h2>Illustrations</h2>
+
+        <p>Drawing is something I love to do everytime I have pen and paper near me.</p>
+        <p>Although I prefer to use a drawing tablet for painting artwork.</p>
+        <hr>
+
+        <img src="/images/music.png" alt="music pictures">
+        <br>
+        <p class="cites">
+            top left: <cite>"Tension"</cite><br>
+            top right: <cite>"Rising to Death"</cite><br>
+            bottom left: <cite>"Confused"</cite><br>
+            bottom right: <cite>"Spontaneous Patriot"</cite>
+        </p>
+
+        <h2>Music</h2>
+
+        <p>Composing and producing instrumental music.</p>
+        <p>Electronic, Rock, Metal. Whatever I find cool!</p>
+    </section>
+
+    <div class="separator">
+        <div class="tag-line"></div>
+        <div class="tag-diag"></div>
+        <div class="tag">
+            <h1>Contact</h1>
+        </div>
+    </div>
+
+    <a name="contact"></a>
+    <footer class="contact">
+        <table>
+            <tr>
+                <td>
+                    <img src="images/facebook.png" alt="Facebook logo">
+                </td>
+                <td>
+                    <a href="#">Facebook</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/instagram.png" alt="Instagram logo">
+                </td>
+                <td>
+                    <a href="#">Instagram</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/twitter.png" alt="Twitter logo">
+                </td>
+                <td>
+                    <a href="#">Twitter</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/email.png" alt="Email logo">
+                </td>
+                <td>
+                    <a href="#">E-mail</a>
+                </td>
+            </tr>
+        </table>
+
+        <h4>HellKnight25 Designs, June 2020</h4>
+    </footer>
+
+</body>
+
+<script>
+    //--JavaScript---------------------------------------
+
+    //--Load Intro---------------------------------------
+    let intro = document.getElementById('intro');
+    window.addEventListener('load', () => {
+        intro.innerHTML = "<img class='intro-img' src='images/flame3croped.gif' alt='flames intro'>";
+    });
+
+    //--Toogle Menu
+    let menuicon = document.getElementById('menu-icon');
+    let menu = document.getElementById('menu');
+    menuicon.addEventListener('click', toggleMenu);
+
+    let anchors = document.getElementsByClassName('anchor');
+    for (anchor of anchors) {
+        anchor.addEventListener('click', toggleMenu);
+    }
+
+    function toggleMenu() {
+        menuicon.classList.toggle('toggle-menu');
+        menu.classList.toggle('toggle-menu');
+    }
+
+</script>
+
+</html>
