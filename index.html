@@ -50,9 +50,8 @@
             <h1>About</h1>
         </div>
     </div>
-    
-    <a name="about"></a>
-    <section class="about";>
+
+    <section class="about" id="about">
         <img src="/images/kier.jpg" alt="HK25 logo">
         <blockquote>"Dream it. Plan it. Do it!"</blockquote>
 
@@ -71,8 +70,7 @@
         </div>
     </div>
 
-    <a name="projects"></a>
-    <section class="projects";>
+    <section class="projects" id="projects">
         <img src="/images/games.png" alt="games pictures">
         <br>
         <p class="cites">
@@ -124,8 +122,7 @@
         </div>
     </div>
 
-    <a name="contact"></a>
-    <footer class="contact">
+    <footer class="contact" id="contact">
         <table>
             <tr>
                 <td>
@@ -163,33 +160,7 @@
 
         <h4>HellKnight25 Designs, June 2020</h4>
     </footer>
-
+    
+    <script src="/scripts/main.js"></script>
 </body>
-
-<script>
-    //--JavaScript---------------------------------------
-
-    //--Load Intro---------------------------------------
-    let intro = document.getElementById('intro');
-    window.addEventListener('load', () => {
-        intro.innerHTML = "<img class='intro-img' src='images/flame3croped.gif' alt='flames intro'>";
-    });
-
-    //--Toogle Menu
-    let menuicon = document.getElementById('menu-icon');
-    let menu = document.getElementById('menu');
-    menuicon.addEventListener('click', toggleMenu);
-
-    let anchors = document.getElementsByClassName('anchor');
-    for (anchor of anchors) {
-        anchor.addEventListener('click', toggleMenu);
-    }
-
-    function toggleMenu() {
-        menuicon.classList.toggle('toggle-menu');
-        menu.classList.toggle('toggle-menu');
-    }
-
-</script>
-
 </html>
