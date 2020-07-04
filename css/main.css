@@ -205,7 +205,7 @@ body {
 }
 
 .tag-line-anim {
-    animation: anim-tagline 1.5s forwards;
+    animation: anim-tagline 2.5s forwards;
 }
 
 .tag-diag {
@@ -220,7 +220,7 @@ body {
 }
 
 .tag-diag-anim {
-    animation: anim-tagdiag 1.5s forwards;
+    animation: anim-tagdiag 2.5s forwards;
 }
 
 .tag {
@@ -239,7 +239,7 @@ body {
 }
 
 .tag-anim {
-    animation: anim-tag 1.5s forwards;
+    animation: anim-tag 2.5s forwards;
 }
 
 .tag h1 {
