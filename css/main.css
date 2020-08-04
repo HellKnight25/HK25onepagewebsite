@@ -364,6 +364,81 @@ hr {
     font-style: italic;
     color: burlywood;
 }
+/*--Media Queries--------------------------------------*/
+/*--Tablet---------------------------------------------*/
+@media (min-width:700px) {
+/*
+.menu-icon {
+    display: none;
+}
+*/
+.menu {
+    width: 50%;
+}
+
+.hero img {
+    margin: auto;
+    width: 50%;
+    display: block;
+}
+
+.title {
+    font-size: 4.5em;
+}
+
+.moto {
+    margin: 0 4em 4em 4em;
+    padding: 4em 2em 3em 2em;
+    border-radius: 4px;
+}
+
+.about {
+    padding: 5em;
+}
+
+.about img {
+    width: 20%;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.games img {
+    width: 50%;
+}
+.games p {
+    margin: 2em;
+}
+
+#games-hr {
+    width: 100%;
+}
+
+hr {
+    margin: 1em 1em;
+}
+
+.projects .illustrations {
+    width: 45%;
+    float: left;
+}
+
+.projects .music {
+    width: 45%;
+    float: right;
+}
+
+.contact tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*--Desktop--------------------------------------------*/
+
+}
 
 /*--Animations-----------------------------------------*/
 @keyframes anim-intro {
