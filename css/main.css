@@ -367,77 +367,119 @@ hr {
 /*--Media Queries--------------------------------------*/
 /*--Tablet---------------------------------------------*/
 @media (min-width:700px) {
-/*
-.menu-icon {
-    display: none;
-}
-*/
-.menu {
-    width: 50%;
-}
+    /*
+    .menu-icon {
+        display: none;
+    }
+    */
+    .menu {
+        width: 50%;
+    }
 
-.hero img {
-    margin: auto;
-    width: 50%;
-    display: block;
-}
+    .hero img {
+        margin: auto;
+        width: 50%;
+        display: block;
+    }
 
-.title {
-    font-size: 4.5em;
-}
+    .title {
+        font-size: 4.5em;
+    }
 
-.moto {
-    margin: 0 4em 4em 4em;
-    padding: 4em 2em 3em 2em;
-    border-radius: 4px;
-}
+    .moto {
+        margin: 0 4em 4em 4em;
+        padding: 4em 2em 3em 2em;
+        border-radius: 4px;
+    }
 
-.about {
-    padding: 5em;
-}
+    .about {
+        padding: 5em;
+    }
 
-.about img {
-    width: 20%;
-}
+    .about img {
+        width: 20%;
+    }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-}
+    .games img {
+        width: 50%;
+    }
+    .games p {
+        margin: 2em;
+    }
 
-.games img {
-    width: 50%;
-}
-.games p {
-    margin: 2em;
-}
+    #games-hr {
+        width: 100%;
+    }
 
-#games-hr {
-    width: 100%;
-}
+    hr {
+        margin: 1em 1em;
+    }
 
-hr {
-    margin: 1em 1em;
-}
+    .illustrations {
+        width: 45%;
+        float: left;
+    }
 
-.projects .illustrations {
-    width: 45%;
-    float: left;
-}
+    .music {
+        width: 45%;
+        float: right;
+    }
 
-.projects .music {
-    width: 45%;
-    float: right;
+    .contact tbody {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
-
-.contact tbody {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /*--Desktop--------------------------------------------*/
+@media (min-width:1000px) {
+    .desktop-home {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 
+    .projects {
+        display: flex;
+    }
+
+    .projects .cites {
+        font-size: .6em;
+    }
+
+    .projects h2 {
+        font-size: 2.8em;
+    }
+
+    .projects p {
+        margin: 1em;
+        font-size: .8em;
+    }
+
+    .games {
+        width: 33%;
+    }
+
+    .games img {
+        width: 100%;
+    }
+
+    #games-hr {
+        width: 0;
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    .illustrations {
+        width: 33%;
+        float: none;
+    }
+
+    .music {
+        width: 33%;
+        float: none;
+    }
 }
 
 /*--Animations-----------------------------------------*/
