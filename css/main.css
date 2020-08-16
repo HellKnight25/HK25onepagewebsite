@@ -7,7 +7,7 @@
     src: url(/fonts/MesquiteW01-Regular.ttf);
 }
 
-/*--Everything----------------------------------------*/
+/*--Everything-----------------------------------------------------------------------------------------------*/
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -88,7 +88,6 @@ body {
 }
 
 /*--Intro----------------------------------------------*/
-
 .intro-img {
     /*
     background-image: url(..//images/flame3.gif);
@@ -104,15 +103,13 @@ body {
 }
 
 /*--Logo-----------------------------------------------*/
-.hero {
+.home {
     align-content: center;
     text-align: center;
-    margin-bottom: -6.2em;
 }
 
-.hero img {
+.hero {
     width: 100%;
-    align-content: center;
     animation: anim-hero 3s forwards;
 }
 
@@ -124,11 +121,13 @@ body {
     font-size-adjust: .5em;
     text-shadow: 0 0 .2em #ff5031;
     text-align: center;
+    user-select: none;
     margin: 0;
     display: inline-block;
     position: relative;
-    z-index: 1;
-    transform: translateY(-.65em);
+    z-index: 1;  
+    transform: translateY(-.7em);
+
     animation: anim-title 3s forwards;
 }
 
@@ -150,11 +149,13 @@ body {
 
 /*--Moto-----------------------------------------------*/
 .moto {
+    margin-top: -5.5em;
     padding: 5em .5em 5em;
     background-color:maroon;
     text-align: center;
     color: wheat;
     text-shadow: .1em .1em black;
+    user-select: none;
     font-family: 'Jost', sans-serif;
     font-size: 1.1em;
     
@@ -266,9 +267,11 @@ body {
 }
 
 .about blockquote {
+    font-family: 'Dancing Script', cursive;
     font-style: italic;
-    font-size: 1em;
-    color: wheat;
+    font-size: 1.15em;
+    color: maroon;
+    text-shadow: wheat -.05em .05em;
     margin: 1.5em 0 4em;
 }
 
@@ -290,7 +293,7 @@ body {
     text-align: center;
     font-size: 1.5em;
 
-    animation: anim-moto 3s forwards;
+    /*animation: anim-moto 3s forwards;*/
 }
 
 .projects img {
@@ -329,7 +332,7 @@ hr {
     background-color: brown;
     color: wheat;
 
-    animation: anim-moto 3s forwards;
+    /*animation: anim-moto 3s forwards;*/
 }
 
 .contact table {
@@ -364,20 +367,16 @@ hr {
     font-style: italic;
     color: burlywood;
 }
-/*--Media Queries--------------------------------------*/
+/*--Media Queries--------------------------------------------------------------------------------------------*/
 /*--Tablet---------------------------------------------*/
 @media (min-width:700px) {
-    /*
-    .menu-icon {
-        display: none;
-    }
-    */
     .menu {
         width: 50%;
     }
 
-    .hero img {
+    .hero {
         margin: auto;
+        margin-bottom: -.25em;
         width: 50%;
         display: block;
     }
@@ -387,7 +386,7 @@ hr {
     }
 
     .moto {
-        margin: 0 4em 4em 4em;
+        margin: -6.2em 4em 4em 4em;
         padding: 4em 2em 3em 2em;
         border-radius: 4px;
     }
@@ -398,6 +397,11 @@ hr {
 
     .about img {
         width: 20%;
+    }
+
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .games img {
@@ -433,9 +437,124 @@ hr {
 }
 /*--Desktop--------------------------------------------*/
 @media (min-width:1000px) {
-    .desktop-home {
+    .menu-icon {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0);
+        visibility: visible;
+        transform: none;
+
+        animation: anim-ham 3s forwards;
+    }
+
+    .menu ul {
+        margin: 0;
         display: flex;
-        flex-direction: row-reverse;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .menu li {
+        background-color: rgba(0, 0, 0, 0);
+        text-shadow: 0 0 .2em #ff5031;
+    }
+
+    .menu li :hover {
+        color: tomato;
+        text-shadow: 0 0 1em #ff5031;
+    }
+
+    .intro {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        animation: anim-intro 3s forwards;
+    }
+
+    .intro-img {
+        position: fixed;
+        right: 0;
+        z-index: 10;
+        width: 50%;
+        animation: anim-intro 3s forwards;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 0;
+    }
+
+    .hero {
+        margin: auto;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        grid-column: 2;
+        grid-row: 1 / 5;
+    }
+
+    .title {
+        grid-row: 2;
+        font-size: 7em;
+
+        animation: anim-title-desk 3s forwards;
+    }
+
+    .titleBorder-top, .titleBorder-bottom {
+        visibility: hidden;
+    }
+
+    .moto {
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+        text-shadow: 0 0 .5em #ff5031;
+        grid-row: 4;
+        transform: none;
+
+        animation: anim-moto-desk 3s forwards;
+    }
+
+    .about {
+        display: flex;
+        padding: 5em 1em 1em 1em;
+    }
+
+    .about-section {
+        margin: 0;
+        padding: 1em
+    }
+
+    .about-text {
+        text-align: justify;
+    }
+
+    .about img {
+        width: 70%;
+    }
+
+    .about blockquote {
+        font-size: 1.2em;
+    }
+
+    .about h2 {
+        text-align: left;
+    }
+
+    .about br {
+        display: none;
     }
 
     .projects {
@@ -480,9 +599,13 @@ hr {
         width: 33%;
         float: none;
     }
+
+    .contact {
+        padding-top: 5em;
+    }
 }
 
-/*--Animations-----------------------------------------*/
+/*--Animations-----------------------------------------------------------------------------------------------*/
 @keyframes anim-intro {
     0% {
         opacity: 1;
@@ -514,7 +637,22 @@ hr {
     }
     100% {
         opacity: 1;
-        transform: translateY(-.65em);
+        transform: translateY(-.7em);
+    }
+}
+
+@keyframes anim-title-desk {
+    0% {
+        opacity: 0;
+        transform: translateX(-1em);
+    }
+    60% {
+        opacity: 0;
+        transform: translateX(-1em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -545,6 +683,21 @@ hr {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes anim-moto-desk {
+    0% {
+        opacity: 0;
+        transform: translateX(-2em);
+    }
+    80% {
+        opacity: 0;
+        transform: translateX(-2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -584,3 +737,4 @@ hr {
         transform: translate(-4.6em, -4.22em) skewX(-45deg) scaleY(1);
     }
 }
+

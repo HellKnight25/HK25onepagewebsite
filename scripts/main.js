@@ -2,6 +2,7 @@
 
     //--Load Intro---------------------------------------
     let intro = document.getElementById('intro');
+
     window.addEventListener('load', () => {
         intro.innerHTML = "<img class='intro-img' src='images/flame3croped.gif' alt='flames intro'>";
     });
