@@ -534,7 +534,7 @@ hr {
 
     .about-section {
         margin: 0;
-        padding: 1em
+        padding: 4em
     }
 
     .about-text {
@@ -542,7 +542,7 @@ hr {
     }
 
     .about img {
-        width: 70%;
+        width: 15em;
     }
 
     .about blockquote {
